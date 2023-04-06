@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/violet">
+
+            <include
+                android:id="@+id/app_title"
+                layout="@layout/name_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="20dp"
+                android:background="@drawable/bg_rect_light_blue"
+                app:layout_constraintTop_toBottomOf="@+id/app_title"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/signin"
+                    style="@style/poppinsMedium20sp"
+                    android:layout_marginTop="0dp"
+                    android:text="Sign In"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/violet"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/login_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/signin">
+
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/poppinsMedium14sp"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/email_address_mandatory"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edt_email_or_phone"
+                        style="@style/editTextStyle"
+                        android:hint="@string/email_address_phone_no"
+                        android:singleLine="true"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+                    <TextView
+                        android:id="@+id/enter_password"
+                        style="@style/poppinsMedium14sp"
+                        android:layout_marginTop="40dp"
+                        android:text="@string/enter_password_mandatory"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_email_or_phone" />
+
+                    <ImageView
+                        android:id="@+id/img_info_password"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/ic_info_blue"
+                        app:layout_constraintStart_toEndOf="@+id/enter_password"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_email_or_phone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        app:layout_constraintBottom_toTopOf="@+id/img_info_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/password_info"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_rect_white">
+
+                        <TextView
+                            android:id="@+id/password_heading"
+                            style="@style/poppinsMedium14sp"
+                            android:textStyle="bold"
+                            android:text="@string/password_requirement"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginTop="5dp" />
+
+                        <TextView
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:drawablePadding="5dp"
+                            android:id="@+id/atleast_one_uppercase"
+                            style="@style/poppinsMedium14sp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/atleast_one_uppercase"
+                            app:layout_constraintTop_toBottomOf="@+id/password_heading"
+                            app:drawableStartCompat="@drawable/ic_password_check_red" />
+
+                        <TextView
+                            android:drawablePadding="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:id="@+id/atleast_one_digit"
+                            style="@style/poppinsMedium14sp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/atleast_one_digit"
+                            app:layout_constraintTop_toBottomOf="@+id/atleast_one_uppercase"
+                            app:drawableStartCompat="@drawable/ic_password_check_red" />
+
+                        <TextView
+                            app:layout_constrainedWidth="true"
+                            android:drawablePadding="5dp"
+                            android:id="@+id/atleast_one_spcl_char"
+                            style="@style/poppinsMedium14sp"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/atleast_one_spcl_char"
+                            app:layout_constraintTop_toBottomOf="@+id/atleast_one_digit"
+                            app:drawableStartCompat="@drawable/ic_password_check_red" />
+
+                        <TextView
+                            android:drawablePadding="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:id="@+id/minimum_eight_chars"
+                            style="@style/poppinsMedium14sp"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/minimum_8_chars"
+                            app:layout_constraintTop_toBottomOf="@+id/atleast_one_spcl_char"
+                            app:drawableStartCompat="@drawable/ic_password_check_red" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <EditText
+                        android:maxLength="14"
+                        android:paddingEnd="30dp"
+                        android:id="@+id/edt_password"
+                        style="@style/editTextStyle"
+                        android:hint="@string/enter_password"
+                        android:inputType="textPassword"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/enter_password" />
+
+                    <ImageView
+                        android:onClick="@{(v) -> fragment.passwordVisibility(edtPassword,v)}"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/edt_password"
+                        app:layout_constraintBottom_toBottomOf="@+id/edt_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_icon_visibility_off"
+                        android:id="@+id/img_enter_password"/>
+
+                    <TextView
+                        android:id="@+id/password_error"
+                        style="@style/poppinsRegular14sp"
+                        android:layout_marginTop="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="@string/password_error"
+                        android:textColor="@color/teal_700"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edt_password" />
+
+
+
+                    <ImageView
+                        android:id="@+id/viewPasswordImgView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="2dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_icon_visibility_off"
+                        app:layout_constraintBottom_toBottomOf="@+id/edt_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/edt_password" />
+
+                    <Button
+                        android:id="@+id/btn_signin"
+                        style="@style/buttonViolet"
+                        android:layout_marginTop="50dp"
+                        android:text="@string/signin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+                    <TextView
+                        android:id="@+id/sign_in_using_otp"
+                        style="@style/poppinsRegular14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btn_signin" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

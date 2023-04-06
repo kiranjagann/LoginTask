@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MapsLogin</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="lead_number">Lead Number</string>
+    <string name="message">Message</string>
+    <string name="signin">Sign in</string>
+    <string name="click_to_signup_"><u><font fgcolor='#4048cc'>Click here to Sign Up </font></u></string>
+    <string name="click_to_signup">Don’t have an account?</string>
+    <string name="email_address_mandatory">Email Address<font fgcolor="#dd1c1c">*</font></string>
+    <string name="forgot_password_underline"><u><font fgcolor='#00448b'>Forgot your password?</font></u></string>
+    <string name="email_address_phone_no">Enter Email Address </string>
+    <string name="enter_password_mandatory">Enter Password <font fgcolor='#dd1c1c'>*</font> </string>
+    <string name="enter_password">Enter Password</string>
+    <string name="verification_pending">Verification Pending!!</string>
+    <string name="resend_link">Resend Link</string>
+    <string name="delete_text">Are you sure you want to  delete?</string>
+    <string name="remove">Remove</string>
+    <string name="log_out">Logout&#160;&#160;</string>
+    <string name="api_key">AIzaSyCEyLWz9tkomKxaPSfLdDqfv1oqDV6GaAo</string>
+    <string name="password_requirement"> Password must contain the following </string>
+    <string name="atleast_one_uppercase">At-least one uppercase letter (ex: A to Z) </string>
+    <string name="atleast_one_digit">At-least one digit (ex: 0 to 9) </string>
+    <string name="atleast_one_spcl_char">At-least one special character(ex: @,!,#,&amp;,*,%) </string>
+    <string name="minimum_8_chars">Minimum 8 characters </string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_error">Invalid Password! Check password rules</string>
+    <string name="password_error_2">Passwords does not match!</string>
+</resources>
